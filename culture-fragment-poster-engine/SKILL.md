@@ -15,6 +15,27 @@ The final work must look modern, restrained, and premium. It should reveal where
 
 Use `references/full-rules.md` when the task needs detailed taxonomy, color rules, Tibetan-script rules, poster route library, or final checklists.
 
+## Interaction Rule
+
+Do not block simple poster or image-generation tasks with a questionnaire.
+
+- If the user provides 1-9 images or a clear subject, make reasonable assumptions and continue.
+- If the user asks to directly generate, keep analysis internal and produce the image direction or generation prompt immediately.
+- Ask at most one concise clarifying question only when the core subject, output type, or visual goal is genuinely missing.
+- Never present long multi-choice menus unless the user explicitly asks for options or the task is a large material-intake workflow.
+- The indexing requirement applies only to folders, batches, or 10+ images. It does not apply to a single uploaded image, a style request, or a normal poster/KV task.
+
+## Generation Prompt Length
+
+When sending text to an image-generation tool or script, use a compact final prompt rather than the full analysis.
+
+- Keep the final generation prompt under 1200 characters by default.
+- Use 80-160 English words for most direct image tasks.
+- Do not pass tables, source-trace notes, task identification, route analysis, or checklists into the image tool.
+- Compress cultural logic into 2-4 visual genes: subject, composition, material/color, typography or atmosphere.
+- Use one short forbidden-elements sentence only when needed.
+- If a detailed 11-field prompt is useful, keep it as internal planning or user-facing documentation, then distill it before generation.
+
 ## Task Routing
 
 First classify the user's request:
@@ -30,14 +51,14 @@ Default to one strongest direction. Only produce multiple directions when the us
 
 ## Material Intake
 
-For 10+ images, create an asset index before using any image in generation:
+For folders, batches, or 10+ images, create an asset index before using those images in generation:
 
 - Preserve original filename, original path, folder structure, and image size.
 - Assign system IDs such as `TIB-001`, `SUZ-001`, `YUN-001`, or a project-specific prefix.
 - For each image, record `source_type`, `content_tags`, `extractable_tags`, `visual_role`, `risk_level`, and `weight`.
 - For 30+ images, also output core assets, sensitive/excluded assets, uncertain-source assets, and a contact-sheet or relation table if possible.
 
-Never let unindexed images enter poster generation.
+Never let unindexed batch materials enter poster generation. For 1-9 images, do a compact internal selection and proceed.
 
 ## Classification Fields
 
@@ -134,7 +155,7 @@ Then replace the content, reassign proportions, redo crops, rebuild typography h
 
 ## Prompt Assembly
 
-For image-generation prompts, include:
+For image-generation prompts, use these fields as an internal checklist, not as a long literal prompt. The final prompt sent to an image tool should be compact:
 
 1. output type and ratio
 2. project, brand, or function
@@ -148,7 +169,11 @@ For image-generation prompts, include:
 10. forbidden elements
 11. quality standard
 
-For high-end brand/KV prompts, always specify the layout move and type system, for example: "huge cropped Chinese title", "italic serif English crossing the image", "right-side vertical typography wall", "rotated microcopy", "material label bars", or "specimen diagram grid". If the generated results feel ordinary, revise the prompt by increasing type scale, cropping, asymmetry, and negative space before changing the cultural subject.
+For high-end brand/KV prompts, always specify one layout move and one type-system cue, for example: "huge cropped Chinese title", "italic serif English crossing the image", "right-side vertical typography wall", "rotated microcopy", "material label bars", or "specimen diagram grid". If the generated results feel ordinary, revise the prompt by increasing type scale, cropping, asymmetry, and negative space before changing the cultural subject.
+
+Example compact generation prompt:
+
+`Luxury armored villa entry door, 9:16 product KV. Symmetrical front view, deep black-grey forged metal with aged bronze relief, brushed gold accents, subtle Shang-Zhou bronze vessel rhythm translated into modern geometric bands and raised studs. Minimal luxury composition, dramatic side light, dark negative space, museum-grade material detail, architectural photography. Avoid literal animal faces, tourist ornament, full-surface pattern coverage, cheap chrome.`
 
 Remember that image models are unreliable for exact Chinese, Tibetan, dates, addresses, and brand spelling. For formal deliverables, plan to regenerate or manually typeset text in Figma, Photoshop, Illustrator, or another layout tool.
 
