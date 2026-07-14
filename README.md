@@ -12,6 +12,25 @@
 
 最终目标是：作品看起来现代、克制、高级，同时能看出文化来源，但不直接复制某一张源图。
 
+## 示例图
+
+这些是用这个 skill 跑出的视觉测试和参考样例，重点展示“文化材料 → 现代海报/KV”的转译结果。
+
+<table>
+  <tr>
+    <td width="50%"><img src="8dc29d5b4ddb67499a005d4d0c14661.png" alt="Culture fragment poster sample 01"></td>
+    <td width="50%"><img src="d543426882c8a10b12ab0c484f8fc47.png" alt="Culture fragment poster sample 02"></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="ig_07d1e21d994d3940016a47dce42e68819b9ead367d875b2f05.png" alt="Culture fragment poster sample 03"></td>
+    <td width="50%"><img src="ig_07d1e21d994d3940016a48a6a88608819bb5dac3c544ed75d3.png" alt="Culture fragment poster sample 04"></td>
+  </tr>
+</table>
+
+参考素材示例：
+
+![Reference material](微信图片_20260704164632.jpg)
+
 ## 适合做什么
 
 - 整理一整个文化素材文件夹，建立可追溯图片索引
@@ -144,4 +163,3 @@ $culture-fragment-poster-engine
 - 文化、宗教、民族文字和仪式图像有语义风险；正式商用前需要人工核验。
 - 商业参考图只能学习方法，不能当作文化事实，也不能照抄版式坐标。
 - 图像模型不擅长准确文字；中文、英文、藏文、日期、地址和品牌名应在后期排版工具里校正。
-
